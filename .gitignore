@@ -1,0 +1,37 @@
+# Node
+node_modules/
+**/node_modules/
+
+# Next.js build
+.next/
+out/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+
+# Logs
+*.log
+postgres-dev.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Storage and data
+/storage/
+medvision-cxr/data/
+/.pgdata-dev/
+/.pgdata-dev/*
+medvision-cxr/backend/storage/
+medvision-cxr/backend/storage/*
+medvision-cxr/frontend/.next/

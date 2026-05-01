@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: #f4f7f4;
+  --surface: #fbfdf9;
+  --surface-muted: #eef4f1;
+  --primary: #0d5c63;
+  --primary-ink: #f1faf8;
+  --accent: #f28a58;
+  --accent-soft: #ffe2d4;
+  --border: #cddcd6;
+  --text: #14303a;
+  --text-muted: #55717b;
+  --danger: #c95d4a;
+  --success: #2d8f61;
+  --warning: #b67d26;
+  --info: #3b77a8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(13, 92, 99, 0.06), transparent 32%),
+    linear-gradient(180deg, #f7faf7 0%, #f1f6f4 100%);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background-image: var(--tw-gradient-stops), linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0));
+}
+
+.clinical-grid {
+  background-size: 32px 32px;
+}
+
+.glass-panel {
+  background: rgba(251, 253, 249, 0.82);
+  backdrop-filter: blur(18px);
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8;
+  }
+
+  .card-medical {
+    @apply rounded-2xl border border-border bg-surface shadow-soft;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-border bg-surfaceMuted px-3 py-1 text-xs font-semibold tracking-wide text-textMuted;
+  }
+
+  .headline {
+    @apply font-display text-3xl font-semibold tracking-tight text-text sm:text-4xl lg:text-5xl;
+  }
+
+  .subheadline {
+    @apply text-base leading-7 text-textMuted sm:text-lg;
+  }
+}
